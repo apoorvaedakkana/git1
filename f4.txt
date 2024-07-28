@@ -1,0 +1,61 @@
+1.
+git config --global user.email "aapoorvaedakkana@gmail.com"
+git config --global user.name "Apoorva Edakkana"
+git init
+git clone https://github.com/apoorvaedakkana/git1.git
+cd git1
+notepad f1.txt
+notepad f2.txt
+git add .
+git commit -m "Commiting two files"
+git push
+git log
+
+
+2.
+git branch feature-branch
+git checkout feature-branch
+notepad f1.txt
+notepad f2.txt
+git add .
+git commit -m "Commiting files inside the feature-branch"
+notepad f3.txt
+notepad f4.txt
+git add .
+git commit -m "file 3 and 4"
+git checkout main
+git merge feature-branch
+git log
+git checkout feature-branch
+notepad f5.txt
+notepad f6.txt
+git add .
+git stash
+git checkout main
+git stash apply
+
+3.
+git log --oneline
+git fetch origin
+git rebase origin/main
+git status
+git add .
+git commit -m "commit "
+git rebase origin/main
+git log
+
+4.
+git tag -a v1.0 -m "tag v1.0"
+git show v1.0
+
+5.
+git log
+git status
+git log --oneline
+git checkout feature-branch
+git cherry-pick d042acd
+
+6.
+git log --author="Apoorva Edakkana" --before="29-07-2024" --after="27-07-2024"
+git revert 6d3cdfa
+git log
